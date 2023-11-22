@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="s,S">
+
+</language>
+<language name="C Source File">
+<includepath>Core/Inc</includepath>
+<includepath>Drivers/STM32G0xx_HAL_Driver/Inc</includepath>
+<includepath>Drivers/STM32G0xx_HAL_Driver/Inc/Legacy</includepath>
+<includepath>Drivers/CMSIS/Device/ST/STM32G0xx/Include</includepath>
+<includepath>Drivers/CMSIS/Include</includepath>
+<includepath>C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\common\Thirdparty\FreeRTOS</includepath>
+<includepath>C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\common\Thirdparty\FreeRTOS\portable\GCC\ARM_CM0</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="s,S">
+<macro>
+<name>DEBUG</name><value/>
+</macro>
+
+</language>
+<language name="C Source File">
+<macro>
+<name>DEBUG</name><value/>
+</macro>
+<macro>
+<name>USE_HAL_DRIVER</name><value/>
+</macro>
+<macro>
+<name>STM32G071xx</name><value/>
+</macro>
+
+</language>
+<language name="Object File">
+
+</language>
+</section>
+</cdtprojectproperties>

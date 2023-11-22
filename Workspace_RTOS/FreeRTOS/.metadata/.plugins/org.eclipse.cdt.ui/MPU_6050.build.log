@@ -1,0 +1,45 @@
+17:34:47 **** Incremental Build of configuration Debug for project MPU_6050 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:99:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   99 |   HAL_UART_Transmit(&huart2, "All Okay\r\n", sizeof("ALL Okay\r\n"), 100);
+      |                              ^~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:102:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  102 |   HAL_UART_Transmit(&huart2, "NOT Okay\r\n", sizeof("NOT Okay\r\n"), 100);
+      |                              ^~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "MPU_6050.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\MPU_6050\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU_6050.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU_6050.elf
+ 
+arm-none-eabi-size   MPU_6050.elf 
+arm-none-eabi-objdump -h -S  MPU_6050.elf  > "MPU_6050.list"
+arm-none-eabi-objcopy  -O binary  MPU_6050.elf  "MPU_6050.bin"
+   text	   data	    bss	    dec	    hex	filename
+  12848	     20	   1788	  14656	   3940	MPU_6050.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU_6050.bin
+ 
+Finished building: MPU_6050.list
+ 
+
+17:34:49 Build Finished. 0 errors, 2 warnings. (took 2s.311ms)
+

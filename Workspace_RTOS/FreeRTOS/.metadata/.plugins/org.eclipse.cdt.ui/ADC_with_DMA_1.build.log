@@ -1,0 +1,91 @@
+15:51:55 **** Incremental Build of configuration Debug for project ADC_with_DMA_1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32g0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32g0xx_it.d" -MT"Core/Src/stm32g0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32g0xx_it.o"
+../Core/Src/stm32g0xx_it.c: In function 'DMA1_Channel1_IRQHandler':
+../Core/Src/stm32g0xx_it.c:151:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  151 |  HAL_UART_Transmit(&huart2, "Hello from DMA1_Channel1_IRQHandler\r\n", sizeof("Hello from DMA1_Channel1_IRQHandler\r\n"), HAL_MAX_DELAY);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/stm32g0xx_it.c:22:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/stm32g0xx_it.c: In function 'DMA1_Channel2_3_IRQHandler':
+../Core/Src/stm32g0xx_it.c:165:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  165 |  HAL_UART_Transmit(&huart2, "Hello from DMA1_Channel2_IRQHandler\r\n", sizeof("Hello from DMA1_Channel2_IRQHandler\r\n"), HAL_MAX_DELAY);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/stm32g0xx_it.c:22:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  122 |         HAL_UART_Transmit(&huart2, "Error in DMA generation\r\n", sizeof("Error in DMA generation\r\n"), HAL_MAX_DELAY);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:125:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  125 |    HAL_UART_Transmit(&huart2, "Code is runing\r\n", sizeof("Code is runing\r\n"), HAL_MAX_DELAY);
+      |                               ^~~~~~~~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:81:7: warning: unused variable 'mayuri' [-Wunused-variable]
+   81 |  char mayuri[] = "DMA is working properly , you can move now\r\n";
+      |       ^~~~~~
+../Core/Src/main.c:79:11: warning: unused variable 'raw' [-Wunused-variable]
+   79 |  uint16_t raw;
+      |           ^~~
+../Core/Src/main.c: In function 'DMATransferComplete':
+../Core/Src/main.c:388:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  388 |  HAL_UART_Transmit(&huart2, "Transfer completed\r\n", sizeof("Transfer completed\r\n"), HAL_MAX_DELAY);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "ADC_with_DMA_1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\ADC_with_DMA\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_with_DMA_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_with_DMA_1.elf
+ 
+arm-none-eabi-size   ADC_with_DMA_1.elf 
+arm-none-eabi-objdump -h -S  ADC_with_DMA_1.elf  > "ADC_with_DMA_1.list"
+arm-none-eabi-objcopy  -O binary  ADC_with_DMA_1.elf  "ADC_with_DMA_1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  16904	     20	   2076	  19000	   4a38	ADC_with_DMA_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_with_DMA_1.bin
+ 
+Finished building: ADC_with_DMA_1.list
+ 
+
+15:51:57 Build Finished. 0 errors, 7 warnings. (took 2s.541ms)
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\158276\STM32CubeIDE\Myworkspace\UART_demo"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\006Button_interrupt"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\005LED_Task_Notify"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\004LED_Periodic_task"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\003LED_BLOCK_DELAY"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\002Task_HAL"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\002_TASK"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\006LED_Button_ISR"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\004LED_periodic_task"/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\003LED_BLOCK_TASKS"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\004LED_Periodic_task\004LED_Periodic_task.ioc"/>
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\158276\STM32Cube\Repository\STM32Cube_FW_G0_V1.5.1\Projects\NUCLEO-G071RB\Examples\RTC\RTC_TimeStamp\STM32CubeIDE"/>
+			<item value="C:\Users\158276\STM32Cube\Repository\STM32Cube_FW_G0_V1.5.1\Projects\NUCLEO-G071RB\Examples\ADC\ADC_SingleConversion_TriggerTimer_DMA"/>
+		</list>
+	</section>
+</section>

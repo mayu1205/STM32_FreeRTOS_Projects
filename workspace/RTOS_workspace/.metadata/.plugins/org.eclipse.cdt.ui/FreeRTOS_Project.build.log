@@ -1,0 +1,63 @@
+17:07:27 **** Incremental Build of configuration Debug for project FreeRTOS_Project ****
+make -j8 all 
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/portable/MemMang/heap_4.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/portable/MemMang/heap_4.d" -MT"Third_Party/FreeRTOS/portable/MemMang/heap_4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.d" -MT"Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/croutine.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/croutine.d" -MT"Third_Party/FreeRTOS/croutine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/croutine.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/event_groups.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/event_groups.d" -MT"Third_Party/FreeRTOS/event_groups.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/event_groups.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/list.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/list.d" -MT"Third_Party/FreeRTOS/list.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/list.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/queue.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/queue.d" -MT"Third_Party/FreeRTOS/queue.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/queue.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/stream_buffer.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/stream_buffer.d" -MT"Third_Party/FreeRTOS/stream_buffer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/stream_buffer.o"
+arm-none-eabi-gcc "../Third_Party/FreeRTOS/tasks.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/portable/GCC/ARM_CM0" -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_Party/FreeRTOS/tasks.d" -MT"Third_Party/FreeRTOS/tasks.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_Party/FreeRTOS/tasks.o"
+In file included from ../Third_Party/FreeRTOS/croutine.c:29:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/croutine.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.c:34:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Third_Party/FreeRTOS/list.c:37:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Third_Party/FreeRTOS/event_groups.c:38:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/FreeRTOS/portable/GCC/ARM_CM0/subdir.mk:19: Third_Party/FreeRTOS/portable/GCC/ARM_CM0/port.o] Error 1
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/list.o] Error 1
+In file included from ../Third_Party/FreeRTOS/queue.c:37:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Third_Party/FreeRTOS/tasks.c:39:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Third_Party/FreeRTOS/stream_buffer.c:39:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../Third_Party/FreeRTOS/portable/MemMang/heap_4.c:45:
+C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/FreeRTOS_Project/Third_Party/FreeRTOS/include/FreeRTOS.h:59:10: fatal error: FreeRTOSConfig.h: No such file or directory
+   59 | #include "FreeRTOSConfig.h"
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/event_groups.o] Error 1
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/stream_buffer.o] Error 1
+make: *** [Third_Party/FreeRTOS/portable/MemMang/subdir.mk:19: Third_Party/FreeRTOS/portable/MemMang/heap_4.o] Error 1
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/queue.o] Error 1
+make: *** [Third_Party/FreeRTOS/subdir.mk:37: Third_Party/FreeRTOS/tasks.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+17:07:28 Build Failed. 17 errors, 0 warnings. (took 884ms)
+

@@ -1,0 +1,70 @@
+15:15:10 **** Incremental Build of configuration Debug for project GY_521 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  115 |    sprintf(msg,"%d\r\n",whoAmIValue);
+      |    ^~~~~~~
+../Core/Src/main.c:115:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include "stm32g0xx_it.h"
+  +++ |+#include <stdio.h>
+   26 | /* USER CODE END Includes */
+../Core/Src/main.c:116:46: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  116 |    HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
+      |                                              ^~~~~~
+../Core/Src/main.c:116:46: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:26:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   25 | #include "stm32g0xx_it.h"
+  +++ |+#include <string.h>
+   26 | /* USER CODE END Includes */
+../Core/Src/main.c:122:35: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  122 |        HAL_UART_Transmit(&huart2, "Pass", sizeof("Pass"), 100);
+      |                                   ^~~~~~
+      |                                   |
+      |                                   char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:104:46: warning: unused variable 'accelZ' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |                                              ^~~~~~
+../Core/Src/main.c:104:38: warning: unused variable 'accelY' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |                                      ^~~~~~
+../Core/Src/main.c:104:30: warning: unused variable 'accelX' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |                              ^~~~~~
+../Core/Src/main.c:104:23: warning: unused variable 'gyroZ' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |                       ^~~~~
+../Core/Src/main.c:104:16: warning: unused variable 'gyroY' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |                ^~~~~
+../Core/Src/main.c:104:9: warning: unused variable 'gyroX' [-Wunused-variable]
+  104 | int16_t gyroX, gyroY, gyroZ, accelX, accelY, accelZ;
+      |         ^~~~~
+../Core/Src/main.c:103:9: warning: unused variable 'buffer' [-Wunused-variable]
+  103 | uint8_t buffer[14];
+      |         ^~~~~~
+arm-none-eabi-gcc -o "GY_521.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\GY_521\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GY_521.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GY_521.elf
+ 
+arm-none-eabi-size   GY_521.elf 
+arm-none-eabi-objdump -h -S  GY_521.elf  > "GY_521.list"
+arm-none-eabi-objcopy  -O binary  GY_521.elf  "GY_521.bin"
+   text	   data	    bss	    dec	    hex	filename
+  16376	    120	   1816	  18312	   4788	GY_521.elf
+Finished building: default.size.stdout
+ 
+Finished building: GY_521.bin
+ 
+Finished building: GY_521.list
+ 
+
+15:15:12 Build Finished. 0 errors, 12 warnings. (took 2s.647ms)
+

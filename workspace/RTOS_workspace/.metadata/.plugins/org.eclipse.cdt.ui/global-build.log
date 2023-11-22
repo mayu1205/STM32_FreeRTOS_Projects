@@ -1,0 +1,84 @@
+18:16:04 **** Incremental Build of configuration Debug for project 004Task_priority ****
+make -j8 all 
+arm-none-eabi-size   004Task_priority.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13548	     28	   9148	  22724	   58c4	004Task_priority.elf
+Finished building: default.size.stdout
+ 
+20:05:26 **** Incremental Build of configuration Debug for project 001Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Third_party/FreeRTOS/portable/MemMang/heap_4.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/portable/MemMang/heap_4.d" -MT"Third_party/FreeRTOS/portable/MemMang/heap_4.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/portable/GCC/ARM_CM0/port.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/portable/GCC/ARM_CM0/port.d" -MT"Third_party/FreeRTOS/portable/GCC/ARM_CM0/port.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/portable/GCC/ARM_CM0/port.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/croutine.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/croutine.d" -MT"Third_party/FreeRTOS/croutine.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/croutine.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/event_groups.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/event_groups.d" -MT"Third_party/FreeRTOS/event_groups.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/event_groups.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/list.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/list.d" -MT"Third_party/FreeRTOS/list.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/list.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/queue.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/queue.d" -MT"Third_party/FreeRTOS/queue.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/queue.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/stream_buffer.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/stream_buffer.d" -MT"Third_party/FreeRTOS/stream_buffer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/stream_buffer.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/tasks.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/tasks.d" -MT"Third_party/FreeRTOS/tasks.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/tasks.o"
+arm-none-eabi-gcc "../Third_party/FreeRTOS/timers.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Third_party/FreeRTOS/timers.d" -MT"Third_party/FreeRTOS/timers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Third_party/FreeRTOS/timers.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001Task.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\workspace\RTOS_workspace\001Task\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001Task.elf
+ 
+arm-none-eabi-size   001Task.elf 
+arm-none-eabi-objdump -h -S  001Task.elf  > "001Task.list"
+arm-none-eabi-objcopy  -O binary  001Task.elf  "001Task.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15120	     28	   9220	  24368	   5f30	001Task.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001Task.bin
+ 
+Finished building: 001Task.list
+ 
+20:06:55 **** Incremental Build of configuration Debug for project 001Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001Task.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\workspace\RTOS_workspace\001Task\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001Task.elf
+ 
+arm-none-eabi-size   001Task.elf 
+arm-none-eabi-objdump -h -S  001Task.elf  > "001Task.list"
+arm-none-eabi-objcopy  -O binary  001Task.elf  "001Task.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15200	     28	   9220	  24448	   5f80	001Task.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001Task.bin
+ 
+Finished building: 001Task.list
+ 
+20:07:43 **** Incremental Build of configuration Debug for project 001Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001Task.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\workspace\RTOS_workspace\001Task\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001Task.elf
+ 
+arm-none-eabi-size   001Task.elf 
+arm-none-eabi-objdump -h -S  001Task.elf  > "001Task.list"
+arm-none-eabi-objcopy  -O binary  001Task.elf  "001Task.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15200	     28	   9220	  24448	   5f80	001Task.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001Task.bin
+ 
+Finished building: 001Task.list
+ 
+20:09:37 **** Incremental Build of configuration Debug for project 001Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/workspace/RTOS_workspace/001Task/Third_party/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001Task.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\workspace\RTOS_workspace\001Task\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001Task.elf
+ 
+arm-none-eabi-size   001Task.elf 
+arm-none-eabi-objdump -h -S  001Task.elf  > "001Task.list"
+   text	   data	    bss	    dec	    hex	filename
+  15216	     28	   9220	  24464	   5f90	001Task.elf
+arm-none-eabi-objcopy  -O binary  001Task.elf  "001Task.bin"
+Finished building: default.size.stdout
+ 
+Finished building: 001Task.bin
+ 
+Finished building: 001Task.list
+ 

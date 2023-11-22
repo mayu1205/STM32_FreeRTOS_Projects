@@ -1,0 +1,33 @@
+10:08:39 **** Incremental Build of configuration Debug for project UART_demo ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  100 |    HAL_UART_Transmit(&huart2, "Hello\r\n", sizeof("Hello\n"), 1000);
+      |                               ^~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "UART_demo.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Myworkspace\UART_demo\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_demo.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_demo.elf
+ 
+arm-none-eabi-size   UART_demo.elf 
+arm-none-eabi-objdump -h -S  UART_demo.elf  > "UART_demo.list"
+arm-none-eabi-objcopy  -O binary  UART_demo.elf  "UART_demo.bin"
+   text	   data	    bss	    dec	    hex	filename
+  11128	     20	   1716	  12864	   3240	UART_demo.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_demo.bin
+ 
+Finished building: UART_demo.list
+ 
+
+10:08:43 Build Finished. 0 errors, 1 warnings. (took 3s.498ms)
+

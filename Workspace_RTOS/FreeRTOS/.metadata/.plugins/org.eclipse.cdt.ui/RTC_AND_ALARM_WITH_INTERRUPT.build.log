@@ -1,0 +1,62 @@
+12:27:34 **** Incremental Build of configuration Debug for project RTC_AND_ALARM_WITH_INTERRUPT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:108:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  108 |  HAL_UART_Transmit(&huart2, time, strlen((char*)time), HAL_MAX_DELAY);
+      |                             ^~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:120:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  120 |  HAL_UART_Transmit(&huart2, date, strlen((char*)date), HAL_MAX_DELAY);
+      |                             ^~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:159:8: warning: unused variable 'rtcData' [-Wunused-variable]
+  159 |   char rtcData[20];
+      |        ^~~~~~~
+../Core/Src/main.c: In function 'get_time':
+../Core/Src/main.c:107:41: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  107 |  sprintf((char*)time,"%02d:%02d:%02d\r\n",15+gTime.Hours, 19+gTime.Minutes, gTime.Seconds);
+      |                                         ^
+../Core/Src/main.c:107:2: note: 'sprintf' output between 11 and 30 bytes into a destination of size 10
+  107 |  sprintf((char*)time,"%02d:%02d:%02d\r\n",15+gTime.Hours, 19+gTime.Minutes, gTime.Seconds);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:40: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  118 |  sprintf((char*)date,"%02d-%02d-%2d\r\n",8+gDate.Date, 9+gDate.Month, 2023 + gDate.Year);
+      |                                        ^
+../Core/Src/main.c:118:2: note: 'sprintf' output between 11 and 38 bytes into a destination of size 10
+  118 |  sprintf((char*)date,"%02d-%02d-%2d\r\n",8+gDate.Date, 9+gDate.Month, 2023 + gDate.Year);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "RTC_AND_ALARM_WITH_INTERRUPT.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\RTC_AND_ALARM_WITH_INTERRUPT\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_AND_ALARM_WITH_INTERRUPT.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTC_AND_ALARM_WITH_INTERRUPT.elf
+ 
+arm-none-eabi-size   RTC_AND_ALARM_WITH_INTERRUPT.elf 
+arm-none-eabi-objdump -h -S  RTC_AND_ALARM_WITH_INTERRUPT.elf  > "RTC_AND_ALARM_WITH_INTERRUPT.list"
+arm-none-eabi-objcopy  -O binary  RTC_AND_ALARM_WITH_INTERRUPT.elf  "RTC_AND_ALARM_WITH_INTERRUPT.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18268	    120	   1896	  20284	   4f3c	RTC_AND_ALARM_WITH_INTERRUPT.elf
+Finished building: default.size.stdout
+ 
+Finished building: RTC_AND_ALARM_WITH_INTERRUPT.bin
+ 
+Finished building: RTC_AND_ALARM_WITH_INTERRUPT.list
+ 
+
+12:27:37 Build Finished. 0 errors, 5 warnings. (took 2s.724ms)
+

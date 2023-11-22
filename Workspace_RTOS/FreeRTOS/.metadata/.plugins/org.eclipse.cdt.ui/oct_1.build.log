@@ -1,0 +1,45 @@
+10:15:01 **** Incremental Build of configuration Debug for project oct_1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32g0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32g0xx_it.d" -MT"Core/Src/stm32g0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32g0xx_it.o"
+../Core/Src/stm32g0xx_it.c: In function 'EXTI4_15_IRQHandler':
+../Core/Src/stm32g0xx_it.c:194:3: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  194 |   sprintf(msg,"%d sec\r\n",one_sec);
+      |   ^~~~~~~
+../Core/Src/stm32g0xx_it.c:194:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/stm32g0xx_it.c:24:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   23 | #include "stm32g0xx_it.h"
+  +++ |+#include <stdio.h>
+   24 | /* Private includes ----------------------------------------------------------*/
+../Core/Src/stm32g0xx_it.c:195:46: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  195 |   HAL_UART_Transmit(&huart1, (uint8_t*)msg , strlen(msg), HAL_MAX_DELAY);
+      |                                              ^~~~~~
+../Core/Src/stm32g0xx_it.c:195:46: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/stm32g0xx_it.c:24:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   23 | #include "stm32g0xx_it.h"
+  +++ |+#include <string.h>
+   24 | /* Private includes ----------------------------------------------------------*/
+../Core/Src/stm32g0xx_it.c:202:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+  202 |   sprintf(msg,"arr[%d]",i);
+      |   ^~~~~~~
+../Core/Src/stm32g0xx_it.c:202:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/stm32g0xx_it.c:203:46: warning: incompatible implicit declaration of built-in function 'strlen'
+  203 |   HAL_UART_Transmit(&huart1, (uint8_t*)msg , strlen(msg), HAL_MAX_DELAY);
+      |                                              ^~~~~~
+../Core/Src/stm32g0xx_it.c:203:46: note: include '<string.h>' or provide a declaration of 'strlen'
+arm-none-eabi-gcc -o "oct_1.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\oct_1\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="oct_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: oct_1.elf
+ 
+arm-none-eabi-size   oct_1.elf 
+arm-none-eabi-objdump -h -S  oct_1.elf  > "oct_1.list"
+arm-none-eabi-objcopy  -O binary  oct_1.elf  "oct_1.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18836	    120	   2056	  21012	   5214	oct_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: oct_1.bin
+ 
+Finished building: oct_1.list
+ 
+
+10:15:03 Build Finished. 0 errors, 6 warnings. (took 2s.200ms)
+

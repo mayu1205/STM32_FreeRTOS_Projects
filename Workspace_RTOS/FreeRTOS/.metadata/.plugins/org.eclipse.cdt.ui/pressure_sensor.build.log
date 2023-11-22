@@ -1,0 +1,37 @@
+19:03:34 **** Incremental Build of configuration Debug for project pressure_sensor ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/pressure_sensor/Core/Inc" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/pressure_sensor/Core/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'BMP280_Read_Temperature_Pressure':
+../Core/Src/main.c:80:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   80 |     sprintf(msg, "Temperature: %d.%02d C\r\n", temperature_integer / 100, temperature_integer % 100);
+      |     ^~~~~~~
+../Core/Src/main.c:80:5: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   21 | #include "main.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Core/Src/main.c:81:44: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   81 |  HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100);
+      |                                            ^~~~~~
+../Core/Src/main.c:81:44: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   21 | #include "main.h"
+  +++ |+#include <string.h>
+   22 | 
+arm-none-eabi-gcc -o "pressure_sensor.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\pressure_sensor\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pressure_sensor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pressure_sensor.elf
+ 
+arm-none-eabi-size   pressure_sensor.elf 
+arm-none-eabi-objdump -h -S  pressure_sensor.elf  > "pressure_sensor.list"
+arm-none-eabi-objcopy  -O binary  pressure_sensor.elf  "pressure_sensor.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18324	    120	   1816	  20260	   4f24	pressure_sensor.elf
+Finished building: default.size.stdout
+ 
+Finished building: pressure_sensor.bin
+ 
+Finished building: pressure_sensor.list
+ 
+
+19:03:37 Build Finished. 0 errors, 4 warnings. (took 2s.432ms)
+

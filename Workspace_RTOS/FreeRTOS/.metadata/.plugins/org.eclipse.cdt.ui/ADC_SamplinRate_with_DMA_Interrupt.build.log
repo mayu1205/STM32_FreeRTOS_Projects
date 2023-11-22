@@ -1,0 +1,33 @@
+19:24:27 **** Incremental Build of configuration Debug for project ADC_SamplinRate_with_DMA_Interrupt ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32g0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32g0xx_it.d" -MT"Core/Src/stm32g0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32g0xx_it.o"
+../Core/Src/stm32g0xx_it.c: In function 'DMA1_Channel1_IRQHandler':
+../Core/Src/stm32g0xx_it.c:150:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  150 |  HAL_UART_Transmit(&huart2, "hello DMA1_Channel1_IRQHandler\r\n", sizeof("hello DMA1_Channel1_IRQHandler\r\n"), HAL_MAX_DELAY);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/stm32g0xx_it.c:22:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "ADC_SamplinRate_with_DMA_Interrupt.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\ADC_SamplinRate_with_DMA_Interrupt\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_SamplinRate_with_DMA_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_SamplinRate_with_DMA_Interrupt.elf
+ 
+arm-none-eabi-size   ADC_SamplinRate_with_DMA_Interrupt.elf 
+arm-none-eabi-objdump -h -S  ADC_SamplinRate_with_DMA_Interrupt.elf  > "ADC_SamplinRate_with_DMA_Interrupt.list"
+arm-none-eabi-objcopy  -O binary  ADC_SamplinRate_with_DMA_Interrupt.elf  "ADC_SamplinRate_with_DMA_Interrupt.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15692	     20	   1908	  17620	   44d4	ADC_SamplinRate_with_DMA_Interrupt.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_SamplinRate_with_DMA_Interrupt.bin
+ 
+Finished building: ADC_SamplinRate_with_DMA_Interrupt.list
+ 
+
+19:24:29 Build Finished. 0 errors, 1 warnings. (took 2s.43ms)
+

@@ -1,0 +1,70 @@
+11:43:05 **** Incremental Build of configuration Debug for project 006LED_btn_isr ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/006LED_btn_isr/Thirdparty/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/006LED_btn_isr/Thirdparty/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/006LED_btn_isr/Thirdparty/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Taskfunc1':
+../Core/Src/main.c:284:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  284 |   HAL_UART_Transmit(&huart2, "Hello from Task-1\r\n", sizeof("Hello from Task-1\r\n"), 1000);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:291:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  291 |    HAL_UART_Transmit(&huart2, "Task-1 Deleted\r\n", sizeof("Task-1 Deleted\r\n"), 1000);
+      |                               ^~~~~~~~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'Taskfunc2':
+../Core/Src/main.c:305:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  305 |   HAL_UART_Transmit(&huart2, "Hello from Task-2\r\n", sizeof("Hello from Task-2\r\n"), 1000);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:311:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  311 |    HAL_UART_Transmit(&huart2, "Task-2 Deleted\r\n", sizeof("Task-2 Deleted\r\n"), 1000);
+      |                               ^~~~~~~~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "006LED_btn_isr.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\006LED_btn_isr\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="006LED_btn_isr.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 006LED_btn_isr.elf
+ 
+arm-none-eabi-size   006LED_btn_isr.elf 
+arm-none-eabi-objdump -h -S  006LED_btn_isr.elf  > "006LED_btn_isr.list"
+arm-none-eabi-objcopy  -O binary  006LED_btn_isr.elf  "006LED_btn_isr.bin"
+   text	   data	    bss	    dec	    hex	filename
+  22592	     28	   9380	  32000	   7d00	006LED_btn_isr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 006LED_btn_isr.bin
+ 
+Finished building: 006LED_btn_isr.list
+ 
+
+11:43:08 Build Finished. 0 errors, 4 warnings. (took 2s.225ms)
+

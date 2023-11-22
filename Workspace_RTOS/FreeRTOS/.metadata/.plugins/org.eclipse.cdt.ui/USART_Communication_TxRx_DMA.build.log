@@ -1,0 +1,30 @@
+18:00:52 **** Build of configuration Debug for project USART_Communication_TxRx_DMA ****
+make -j8 all 
+arm-none-eabi-gcc "C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/USART_Communication_TxRx_DMA/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DSTM32G071xx -DDEBUG -c -I../../../../../../../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../../Inc -I../../../../../../../Drivers/STM32G0xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Example/User/main.d" -MT"Example/User/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Example/User/main.o"
+arm-none-eabi-gcc "C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/USART_Communication_TxRx_DMA/Src/stm32g0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DSTM32G071xx -DDEBUG -c -I../../../../../../../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../../Inc -I../../../../../../../Drivers/STM32G0xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Example/User/stm32g0xx_it.d" -MT"Example/User/stm32g0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Example/User/stm32g0xx_it.o"
+arm-none-eabi-gcc "../Example/User/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DSTM32G071xx -DDEBUG -c -I../../../../../../../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../../Inc -I../../../../../../../Drivers/STM32G0xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Example/User/syscalls.d" -MT"Example/User/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Example/User/syscalls.o"
+arm-none-eabi-gcc "../Example/User/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DSTM32G071xx -DDEBUG -c -I../../../../../../../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../../Inc -I../../../../../../../Drivers/STM32G0xx_HAL_Driver/Inc -I../../../../../../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Example/User/sysmem.d" -MT"Example/User/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Example/User/sysmem.o"
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -c -x assembler-with-cpp -MMD -MP -MF"Example/Startup/startup_stm32g071rbtx.d" -MT"Example/Startup/startup_stm32g071rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Example/Startup/startup_stm32g071rbtx.o" "../Example/Startup/startup_stm32g071rbtx.s"
+make: *** No rule to make target 'C:/Users/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.c', needed by 'Drivers/STM32G0xx_LL_Driver/stm32g0xx_ll_utils.o'.  Stop.
+make: *** Waiting for unfinished jobs....
+In file included from ../../Inc/stm32g0xx_ll_bus.h:44,
+                 from ../../Inc/main.h:24,
+                 from C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/USART_Communication_TxRx_DMA/Src/main.c:22:
+../../Inc/stm32g0xx.h:115:12: fatal error: stm32g071xx.h: No such file or directory
+  115 |   #include "stm32g071xx.h"
+      |            ^~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../Inc/stm32g0xx_ll_bus.h:44,
+                 from ../../Inc/main.h:24,
+                 from ../../Inc/stm32g0xx_it.h:28,
+                 from C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/USART_Communication_TxRx_DMA/Src/stm32g0xx_it.c:22:
+../../Inc/stm32g0xx.h:115:12: fatal error: stm32g071xx.h: No such file or directory
+  115 |   #include "stm32g071xx.h"
+      |            ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Example/User/subdir.mk:28: Example/User/main.o] Error 1
+make: *** [Example/User/subdir.mk:30: Example/User/stm32g0xx_it.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+18:00:53 Build Failed. 6 errors, 0 warnings. (took 792ms)
+

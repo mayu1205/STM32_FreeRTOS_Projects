@@ -1,0 +1,6 @@
+app_bluenrg_ms.c:101:6:MX_BlueNRG_MS_Init	56	static
+app_bluenrg_ms.c:222:6:MX_BlueNRG_MS_Process	8	static
+app_bluenrg_ms.c:257:13:User_Process	16	static
+app_bluenrg_ms.c:320:13:Set_Random_Environmental_Values	40	static
+app_bluenrg_ms.c:344:13:Set_Random_Motion_Values	456	static
+app_bluenrg_ms.c:385:13:Reset_Motion_Values	4	static

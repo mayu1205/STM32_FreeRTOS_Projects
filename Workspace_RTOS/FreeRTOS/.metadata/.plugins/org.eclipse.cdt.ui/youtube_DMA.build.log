@@ -1,0 +1,35 @@
+11:04:56 **** Incremental Build of configuration Debug for project youtube_DMA ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:19: warning: format '%hu' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |    sprintf(msg,"%hu\r\n",value);
+      |                 ~~^      ~~~~~
+      |                   |      |
+      |                   int    uint32_t {aka long unsigned int}
+      |                 %lu
+../Core/Src/main.c:110:46: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  110 |    HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 10);
+      |                                              ^~~~~~
+../Core/Src/main.c:110:46: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:26:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   25 | #include <stdio.h>
+  +++ |+#include <string.h>
+   26 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "youtube_DMA.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\youtube_DMA\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="youtube_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: youtube_DMA.elf
+ 
+arm-none-eabi-size   youtube_DMA.elf 
+arm-none-eabi-objdump -h -S  youtube_DMA.elf  > "youtube_DMA.list"
+arm-none-eabi-objcopy  -O binary  youtube_DMA.elf  "youtube_DMA.bin"
+   text	   data	    bss	    dec	    hex	filename
+  22080	    124	   1932	  24136	   5e48	youtube_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: youtube_DMA.bin
+ 
+Finished building: youtube_DMA.list
+ 
+
+11:05:00 Build Finished. 0 errors, 3 warnings. (took 4s.203ms)
+

@@ -1,0 +1,7 @@
+17:24:21 **** Build of configuration Debug for project ADC_MultiChannelSingleConversion ****
+make -j8 all 
+make: *** No rule to make target 'C:/Users/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c', needed by 'Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o'.  Stop.
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+17:24:22 Build Failed. 1 errors, 0 warnings. (took 378ms)
+

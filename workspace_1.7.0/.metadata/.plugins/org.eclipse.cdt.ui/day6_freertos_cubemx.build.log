@@ -1,0 +1,10 @@
+12:54:34 **** Incremental Build of configuration Debug for project day6_freertos_cubemx ****
+make -j8 all 
+arm-none-eabi-size   day6_freertos_cubemx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12820	     24	   5512	  18356	   47b4	day6_freertos_cubemx.elf
+Finished building: default.size.stdout
+ 
+
+12:54:35 Build Finished. 0 errors, 0 warnings. (took 722ms)
+

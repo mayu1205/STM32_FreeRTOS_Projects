@@ -1,0 +1,10 @@
+18:28:49 **** Incremental Build of configuration Debug for project 2_channel_ADC_Sampling_rate ****
+make -j8 all 
+arm-none-eabi-size   2_channel_ADC_Sampling_rate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18252	    120	   1928	  20300	   4f4c	2_channel_ADC_Sampling_rate.elf
+Finished building: default.size.stdout
+ 
+
+18:28:49 Build Finished. 0 errors, 0 warnings. (took 308ms)
+

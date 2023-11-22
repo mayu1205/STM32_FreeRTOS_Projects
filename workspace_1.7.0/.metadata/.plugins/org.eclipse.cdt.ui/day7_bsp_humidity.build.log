@@ -1,0 +1,10 @@
+12:36:06 **** Incremental Build of configuration Debug for project day7_bsp_humidity ****
+make -j8 all 
+arm-none-eabi-size   day7_bsp_humidity.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27448	    308	   2356	  30112	   75a0	day7_bsp_humidity.elf
+Finished building: default.size.stdout
+ 
+
+12:36:07 Build Finished. 0 errors, 0 warnings. (took 774ms)
+

@@ -1,0 +1,67 @@
+10:03:52 **** Incremental Build of configuration Debug for project Menu_project ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:150:29: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+  150 |   HAL_UART_Receive(&huart2, data1, sizeof(data1), 5000);
+      |                             ^~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1611:72: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1611 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                               ~~~~~~~~~^~~~~
+../Core/Src/main.c:151:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  151 |   HAL_UART_Transmit(&huart2, data1, sizeof(data1), HAL_MAX_DELAY);
+      |                              ^~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32g0xx_hal_conf.h:318,
+                 from ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:29,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:1610:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1610 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:164:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  164 |    sprintf(msg,"ch_0 = %hu\r\n",channel_0_raw);
+      |    ^~~~~~~
+../Core/Src/main.c:164:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   21 | #include "main.h"
+  +++ |+#include <stdio.h>
+   22 | 
+../Core/Src/main.c:165:44: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  165 |    HAL_UART_Transmit(&huart2,(uint8_t*)msg,strlen(msg), HAL_MAX_DELAY);
+      |                                            ^~~~~~
+../Core/Src/main.c:165:44: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   21 | #include "main.h"
+  +++ |+#include <string.h>
+   22 | 
+../Core/Src/main.c:164:31: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  164 |    sprintf(msg,"ch_0 = %hu\r\n",channel_0_raw);
+      |                               ^
+../Core/Src/main.c:164:4: note: 'sprintf' output between 11 and 15 bytes into a destination of size 10
+  164 |    sprintf(msg,"ch_0 = %hu\r\n",channel_0_raw);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Menu_project.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\158276\STM32CubeIDE\Workspace_RTOS\FreeRTOS\Menu_project\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Menu_project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Menu_project.elf
+ 
+arm-none-eabi-size   Menu_project.elf 
+arm-none-eabi-objdump -h -S  Menu_project.elf  > "Menu_project.list"
+arm-none-eabi-objcopy  -O binary  Menu_project.elf  "Menu_project.bin"
+   text	   data	    bss	    dec	    hex	filename
+  21340	    244	   1948	  23532	   5bec	Menu_project.elf
+Finished building: default.size.stdout
+ 
+Finished building: Menu_project.bin
+ 
+Finished building: Menu_project.list
+ 
+
+10:03:53 Build Finished. 0 errors, 7 warnings. (took 943ms)
+

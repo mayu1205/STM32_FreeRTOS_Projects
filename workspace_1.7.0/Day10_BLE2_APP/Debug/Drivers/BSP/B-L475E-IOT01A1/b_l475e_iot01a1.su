@@ -1,0 +1,11 @@
+b_l475e_iot01a1.c:194:9:BSP_LED_GetState	16	static
+b_l475e_iot01a1.c:202:13:LED_USER_GPIO_Init	40	static
+b_l475e_iot01a1.c:303:6:BSP_PB_IRQHandler	16	static
+b_l475e_iot01a1.c:313:13:BSP_PB_Callback	16	static
+b_l475e_iot01a1.c:326:13:BUTTON_USER_EXTI_Callback	8	static
+b_l475e_iot01a1.c:335:13:BUTTON_USER_GPIO_Init	40	static
+b_l475e_iot01a1.c:438:26:MX_USART1_UART_Init	24	static
+b_l475e_iot01a1.c:542:9:BSP_COM_SelectLogPort	16	static
+b_l475e_iot01a1.c:554:6:__io_putchar	16	static
+b_l475e_iot01a1.c:567:13:USART1_MspInit	48	static
+b_l475e_iot01a1.c:600:13:USART1_MspDeInit	16	static

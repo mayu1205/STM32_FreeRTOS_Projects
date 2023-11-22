@@ -1,0 +1,10 @@
+19:47:37 **** Incremental Build of configuration Debug for project youtube_DMA_3 ****
+make -j8 all 
+arm-none-eabi-size   youtube_DMA_3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22080	    124	   1932	  24136	   5e48	youtube_DMA_3.elf
+Finished building: default.size.stdout
+ 
+
+19:47:38 Build Finished. 0 errors, 0 warnings. (took 555ms)
+

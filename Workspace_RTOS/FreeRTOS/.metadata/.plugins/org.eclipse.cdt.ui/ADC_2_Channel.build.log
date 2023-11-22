@@ -1,0 +1,10 @@
+10:14:51 **** Build of configuration Debug for project ADC_2_Channel ****
+make -j8 all 
+arm-none-eabi-size   ADC_2_Channel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17828	    120	   1856	  19804	   4d5c	ADC_2_Channel.elf
+Finished building: default.size.stdout
+ 
+
+10:14:51 Build Finished. 0 errors, 0 warnings. (took 363ms)
+

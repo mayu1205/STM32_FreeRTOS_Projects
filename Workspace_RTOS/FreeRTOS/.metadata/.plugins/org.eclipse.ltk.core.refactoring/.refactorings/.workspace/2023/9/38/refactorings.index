@@ -1,0 +1,6 @@
+1695123559151	Delete resource 'ADC_SingleConversion_TriggerTimer_DMA/ADC_MultiChannelSingleConversion.ioc'
+1695127342688	Delete resource 'USART_Communication_TxRx_DMA'
+1695127347876	Delete resource 'ADC_MultiChannelSingleConversion'
+1695188166851	Rename resource 'ADC_with_DMA'
+1695188315856	Rename resource 'ADC_with_DMA_correct'
+1695188337963	Rename resource 'youtube_DMA'

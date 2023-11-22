@@ -1,0 +1,10 @@
+20:52:21 **** Incremental Build of configuration Debug for project Sampling_Rate ****
+make -j8 all 
+arm-none-eabi-size   Sampling_Rate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17788	    120	   1920	  19828	   4d74	Sampling_Rate.elf
+Finished building: default.size.stdout
+ 
+
+20:52:21 Build Finished. 0 errors, 0 warnings. (took 254ms)
+

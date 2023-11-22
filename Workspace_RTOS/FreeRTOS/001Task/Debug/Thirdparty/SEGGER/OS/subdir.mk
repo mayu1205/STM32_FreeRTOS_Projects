@@ -1,0 +1,20 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../Thirdparty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.c 
+
+OBJS += \
+./Thirdparty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o 
+
+C_DEPS += \
+./Thirdparty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Thirdparty/SEGGER/OS/%.o: ../Thirdparty/SEGGER/OS/%.c Thirdparty/SEGGER/OS/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/001Task/Thirdparty/FreeRTOS/include" -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/001Task/Thirdparty/FreeRTOS/portable/GCC/ARM_CM0" -I"C:/Users/158276/STM32CubeIDE/Workspace_RTOS/FreeRTOS/001Task/Thirdparty/FreeRTOS" -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+
